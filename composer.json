@@ -1,0 +1,17 @@
+{
+    "name": "jorge/tienda-virtual",
+    "type": "project",
+    "license": "GNU/GPL",
+    "autoload": {
+        "psr-4": {
+            "Jorge\\TiendaVirtual\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "JorgeReveron",
+            "email": "jorgealexanderclases@gmail.com"
+        }
+    ],
+    "require": {}
+}
