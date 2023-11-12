@@ -20,7 +20,7 @@ require_once "perecederos.php";
     $producto1 = new Productos("papaya",89.99,"x","canarias",4250,3300);
     echo "<p>" . $producto1->show() . "</p>";
     echo "<p>" . $producto1->shippingCost() . "</p>";
-    $perecedero1 = new Perecederos("platano",50,"x","canarias",20,10,"2023-10-12");
+    $perecedero1 = new Perecederos("platano",50,"x","canarias",20,10,"2023-11-15");
     echo "<p>" . $perecedero1->show() . "</p>";
     echo "<p>" . $perecedero1->shippingCost() . "</p>";
     echo "<p>" . $perecedero1->expired() . "</p>";
