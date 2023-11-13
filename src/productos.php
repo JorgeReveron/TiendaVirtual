@@ -12,6 +12,7 @@ class Productos extends TiendaVirtual{
     $this->manufacturerName = $manufacturerName;
     $this->weigth = $weigth;
     $this->bulkiness = $bulkiness;
+    $this->totalPrice = $this->shippingCost()+$this->basePrice;
   }
 
   function shippingCost() {

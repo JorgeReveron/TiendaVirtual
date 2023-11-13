@@ -34,11 +34,11 @@ class Eventos extends TiendaVirtual {
     $dateDiff = $this->eventDay->diff($now);
     if ($dateDiff->format("%a") >= 1 && $dateDiff->format("%a") <= 7) {
       $increment = $this->basePrice*20/100;
-      $this->basePrice = $this->basePrice+$increment;
+      $this->totalPrice = $this->basePrice+$increment;
     }
     if($dateDiff->format("%a") == 0){
       $increment = $this->basePrice*50/100;
-      $this->basePrice = $this->basePrice+$increment;
+      $this->totalPrice = $this->basePrice+$increment;
     }
   }
 

@@ -7,7 +7,7 @@ class Perecederos extends Productos{
   function __construct($name, $basePrice, $characteristics, $manufacturerName, $weigth, $bulkiness, $expirationDate) {
     parent::__construct($name, $basePrice, $characteristics, $manufacturerName, $weigth, $bulkiness);
     $this->expirationDate = New DateTime($expirationDate);
-    $this->priceBasedOnDate();
+    $this->totalPrice = $this->priceBasedOnDate();
   }
 
   function expired() {
@@ -34,12 +34,13 @@ class Perecederos extends Productos{
     $dateDiff = $this->expirationDate->diff($now);
     if ($dateDiff->format("%m") == 1) {
       $discount = $this->basePrice*10/100;
-      $this->basePrice = $this->basePrice-$discount;
+      return $this->totalPrice-$discount;
     }
     if($dateDiff->format("%a") >= 1 && $dateDiff->format("%a") <= 10){
       $discount = $this->basePrice*25/100;
-      $this->basePrice = $this->basePrice-$discount;
+      return $this->totalPrice-$discount;
     }
+    return $this->totalPrice;
   }
 
   function show() {
