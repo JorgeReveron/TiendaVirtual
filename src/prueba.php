@@ -3,6 +3,9 @@ require_once "tiendaVirtual.php";
 require_once "productos.php";
 require_once "perecederos.php";
 require_once "eventos.php";
+require_once "sesiones.php";
+require_once "mixtos.php";
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -31,6 +34,16 @@ require_once "eventos.php";
     echo "<p>" . $evento1->isFinish() . "</p>";
     echo "<p>" . $evento1->daysForEvent() . "</p>";
     echo "<p>" . $evento1->show() . "</p>";
+    $sesion1 = new Sesiones("yoga",20,"seiones de yoga",2);
+    echo "<p>" . $sesion1->sessionDay() . "</p>";
+    echo "<p>" . $sesion1->sessionDay() . "</p>";
+    echo "<p>" . $sesion1->sessionDay() . "</p>";
+    $mixto1 = new Mixtos("yoga",20,"sesiones de yoga",2,"2023-12-15");
+    echo "<p>" . $mixto1->isExpired() . "</p>";
+    echo "<p>" . $mixto1->sessionDay() . "</p>";
+    echo "<p>" . $mixto1->isExpired() . "</p>";
+    echo "<p>" . $mixto1->sessionDay() . "</p>";
+    echo "<p>" . $mixto1->isExpired() . "</p>";
   ?>
 </body>
 </html>
