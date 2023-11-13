@@ -2,6 +2,7 @@
 require_once "tiendaVirtual.php";
 require_once "productos.php";
 require_once "perecederos.php";
+require_once "eventos.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,6 +26,11 @@ require_once "perecederos.php";
     echo "<p>" . $perecedero1->shippingCost() . "</p>";
     echo "<p>" . $perecedero1->expired() . "</p>";
     echo "<p>" . $perecedero1->daysToExpire() . "</p>";
+    echo "<br><br>";
+    $evento1 = new Eventos("Romeria",5,"las fiesta del valle","2023-11-15");
+    echo "<p>" . $evento1->isFinish() . "</p>";
+    echo "<p>" . $evento1->daysForEvent() . "</p>";
+    echo "<p>" . $evento1->show() . "</p>";
   ?>
 </body>
 </html>
